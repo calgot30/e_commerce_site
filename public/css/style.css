@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Some code was borrowed from our COMP710 tutorials as a starting point */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #a0c0f2;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    background: #95b5e8;
+    padding: 20px;
+    color: #163607;
+    position: fixed;
+    
+}
+
+@media (min-width: 576px){}
+.navbar-expand-sm {
+    position: fixed;
+}
+
+.navbar{
+    position: sticky;
+}
+
+.navbar-nav{
+    margin: auto;
+    left: 850px;
+    position: absolute;
+}
+
+.top-right-links {
+    position: relative;
+    left: 1200px;
+}
+
+
+.col-sm-4 {
+    margin: auto;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    /* position: fixed; */
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    font-family: 'Atma';
+    /* left: 650px; */
+   
+}
+
+li {
+    display: inline;
+}
+
+
+article {
+    padding: 20px;
+    background-color: #f1f1f1;
+    /* height: 300px;  only for demonstration, should be removed */
+}
+
+/* Style the footer  was b/ground 777 */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    background-color:#a0c0f2;
+    color: white;
+    text-align: center;
+    
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+        padding-right: 100px;
+        padding-left: 100px;
+        
+    }
+}
+
+
+
+h2, .h2 {
+  color: #fcfcfc;
+  font-family: 'Atma';
+}
+
+/* Style the list inside the menu */
+/* unvisited link */
+nav a:link {
+    color: #fcfcfc;
+    padding-right: 100px;
+    padding-left: 100px;
+    
+}
+
+.logo {
+    position: relative;
+    margin: 0.1%;
+}
+
+/* visited link */
+nav a:visited {
+    color: #fcfcfc;
+}
+
+/* mouse over link */
+nav a:hover {
+    color: #0a3373;
+}
+
+/* selected link */
+nav a:active {
+    color: #0a3373;
+    background-color: floralwhite;
+}
+
+
+/* updating the button */
+.btn btn-warning {
+	background-color: #FF9F41;
+	color: #fcfcfc;
+}
+
+.jumbotron  {
+    background-color: #c7d7f0;
+    font-family: 'Atma';
+}
+
+#main-hello {
+    
+    font-size: 60px;
+}
+
+.main-description-font {
+    font-size: 30px;
+    
+}
+
+
+/* fade animation from this website https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+.fade {
+    
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+
+@keyframes fadeInAnimationTwo { 
+    from { opacity:0; } 
+    to { opacity:1; } }
+
+
+.fade-two {
+    
+   
+    animation: fadeInAnimationTwo ease 3s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s; 
+    opacity: 0;
+    
+}
+
+@keyframes fadeInAnimationThree { 
+    from { opacity:0; } 
+    to { opacity:1; } }
+
+
+.fade-three {
+    
+   
+    animation: fadeInAnimationTwo ease 3s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; 
+    opacity: 0;
+    
+}
+
+
+.products-header{
+    text-align: center;
+    font-family: Atma;
+}
+
+.items-for-sale{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%;
+}
+
+.product-block{
+    background-color: #c5d2e3;
+    padding: 40px;
+}
+
+.art-block{
+    background-color: #a2c8fa;
+    padding: 40px;
+}
+
+.jumbotron {
+   margin-bottom: 0px;
+}
+
+.picture-placement {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* width: 80%; */
+    padding: 40px;
+    height:"300"; width:"550";
+}
+
+#product-heading {
+    font-family: sans-serif;
+    font-size: 34pt;
+    font-weight: bold;
+}
+
+#product-description {
+    font-family: sans-serif;
+    font-size: 15pt;
+    font-weight: normal;
+}
+
+
+/* Effect for button used taken from W3 schools https://www.w3schools.com/css/css3_buttons.asp */
+.button-add-to-cart {
+margin:auto;
+border-radius:2px;
+border:none; 
+background-color:#95c5e8;
+padding: 15px 32px;
+border-radius:2px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+opacity: 0.6;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.button-add-to-cart:hover {opacity:1}
+
+
+/* the piece of form that changes the amount added to cart. */
+.quantity-selector{
+    width: 15%;
+    
+    border-radius:2px;
+    
+   
+    margin: 0;
+}
+
+
+
+/* properties for the cart table */
+/* gives the table for the cart a zebra stripe */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+.cart {
+    position:relative;
+    margin:auto;
+    width: 800px;
+    height:800px;
+    padding:20%;
+  }
+
+.item-name-left{
+    padding-left:30px;
+}
+
+.text-name-left{
+    padding-left:30px;
+}
+
+.text-price-right{
+    text-align:right;
+    padding-right:30px;
+}
+
+.item-price-right {
+    text-align:right;
+    padding-right:30px;
+}
+
+.item-quantity-mid {
+    text-align:center;
+    padding-right:30px;
+}
+
+.text-quantity-mid {
+   text-align:center;
+   padding-right:30px;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px; 
+  margin-top: 15px;
+  width: 800px;
+  line-height: 200%; 
+}
+
+
+
